@@ -1,0 +1,17 @@
+language=Available languages: %languages%%nPlease select your language. (for "%default%" press "Enter")
+language_selected=Language "%language%" selected.
+
+rules_know=Do you know the rules? (y/n):
+rules=Rules:%n At the beginning of the game, the LED is illuminated and will be turned off when the first player presses the button to start the game.%n After the LED lights up again, the player has to press the button as fast as possible.%n Every player has one chance. As soon as the LED brightens again, the next player can start his turn by pressing the button.%n If you press the button before the LED illuminates again, you will lose.%n The fastest player will win!
+
+names=Please enter the playernames (comma-seperated):
+names_min=The minimum amount of players are 2.
+names_registered=Registered players: %players%.
+names_def_player=Player %i%
+
+start=%player%, press to start.
+next=%player%, it's your turn now.
+
+winner=The winner is: %player%. reaction time: %time%.
+lost=%player% lost the game.
+no_winner=Game Over.

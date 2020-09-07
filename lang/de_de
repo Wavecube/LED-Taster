@@ -1,0 +1,17 @@
+language=Verfügbare Sprachen: %languages%%nBitte wähle die Sprache aus. (für "%default%" drücke "Eingabe")
+language_selected=Die Sprache "%language%" wurde ausgewählt.
+
+rules_know=Kennst du die Regeln bereits? (j/n):
+rules=Regeln:%n Die LED ist zu Beginn eingeschaltet, nach betätigen des Tasters erlischt diese und das Spiel beginnt.%n Ziel ist es nach erneutem aufleuchten der LED, den Taster schnell zu drücken. Jeder Spieler kommt einmal%n an die Reihe, sobald der Spieler zuvor fertig ist, wird die LED zurückgesetzt und die neue Runde beginnt%n wieder mit dem drücken des Tasters. Sollte vor dem Aufleuchten der LED betätigt werden, ist der Spieler%n sofort ausgeschieden.%n Der Spieler mit der schnellsten Reaktionszeit gewinnt!
+
+names=Bitte geben Sie zuerst die Namen der Spieler (Kommasepariert) in die Konsole ein:
+names_min=Die mindestanzahl der Spieler beträgt 2.
+names_registered=Die Spieler: %players% wurden registriert.
+names_def_player=Spieler %i%
+
+start=Um das Spiel zu beginnen drückt %player% zuerst die Taste.
+next=%player% ist nun an der Reihe.
+
+winner=Der Gewinner ist: %player%, mit einer Bestzeit von: %time%.
+lost=Der Spieler: %player% hat zu früh gedrückt und scheidet aus.
+no_winner=Es gibt keinen Gewinner.

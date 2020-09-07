@@ -1,0 +1,105 @@
+@startuml
+
+title Klassendiagramm - Led/Taster Projekt
+
+Class Component{
+    # ioPin: int
+}
+
+Class Button extends Component{
+    + getStatus(): boolean
+}
+
+Class Led extends Component{
+    # status: boolean=False
+    # on(): void
+    # off(): void
+    + switch(): void
+}
+package Databasae{
+
+    Class Database{
+        # db_name: string
+        - username: string
+        - password: string
+        + host: string="localhost"
+        + connection: mysql.connector.connection
+    
+        + connect(database: string): void
+        + execute(sql: string): void
+        + close(): void
+    }
+
+    Class Executor{
+        + db: Database
+    
+        + saveState(state: boolean): void
+        + close(): void
+    }
+}
+package Properties{
+
+    Class Properties{
+        - defaults: dictionary
+        + properties: dictionary
+    
+        + get(key: string): string
+        + promptL(key: string, seperator: string=",", strip:bool=False): list<string>
+    }
+
+    Class Lang extends Properties{
+        # language: string
+        
+        + get(key: string, replace: kwargs): string
+        + toString(): string
+        {static} + listLangs(): list<string>
+        {static} + langsToString(): string
+    }
+}
+package Game{
+    Class Game{
+        - properties: Properties
+        - button: Button
+        - led: Led
+        - min_time: integer
+        - max_time: integer
+        - default_lang: Language
+        - prescision: int
+        - wait: int
+    
+        - selectLanguage(): void
+        - rules(): void
+        - registerPlayers(): void
+        - playersToString(): string
+        - start(): void
+        - session(player: string): void
+        - determineWinner(): void
+        
+        + run(): void
+    }
+    
+    Class Worker{
+        + properties: Properties
+        + defaults: dictionary
+        
+        + run(): void
+    }
+    
+}
+package Load{
+    Class LWorker{
+        - running: boolean=True
+        - properties: Properties
+        - activation_time: float
+        - button: Button
+        - led: led
+        - db: Database
+        - executor: Execcutor
+        
+        + run(): void
+    }
+}
+    
+
+
+@enduml
